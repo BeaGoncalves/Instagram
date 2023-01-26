@@ -1,6 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/avatar"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView_publicacoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginStart="28dp"
+        android:text="Publicações"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@id/profile_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_contador_publicacoes"/>
+
+    <TextView
+        android:id="@+id/tv_seguidores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Seguidores"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@+id/textView_publicacoes"
+        app:layout_constraintTop_toBottomOf="@id/tv_contador_seguidores" />
+
+    <TextView
+        android:id="@+id/tv_seguindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seguindo"
+        android:textSize="14sp"
+        android:layout_marginStart="16dp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toEndOf="@+id/tv_seguidores"
+        app:layout_constraintTop_toBottomOf="@id/tv_contador_seguindo" />
+
+    <TextView
+        android:id="@+id/tv_contador_publicacoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="60dp"
+        android:text="0"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profile_image" />
+
+    <TextView
+        android:id="@+id/tv_contador_seguidores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="80dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_contador_publicacoes"
+         />
+
+    <TextView
+        android:id="@+id/tv_contador_seguindo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="50dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_contador_seguidores"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nome_pessoa_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="lorem ipieedks"
+        android:layout_marginTop="8dp"
+        android:maxLines="3"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_editar_perfil"
+        android:layout_width="201dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_botao_editar_perfil"
+        android:text="Editar perfil"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.819"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nome_pessoa_tv" />
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_editar_perfil"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
