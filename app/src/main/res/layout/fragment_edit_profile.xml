@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:text="Alterar foto"
         android:layout_marginTop="16dp"
+        android:clickable="true"
         android:textSize="18sp"
         android:textColor="#3f51b5"
         android:textStyle="bold"

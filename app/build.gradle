@@ -49,9 +49,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:21.1.0'
     implementation 'com.google.firebase:firebase-database:20.1.0'
     implementation 'com.google.firebase:firebase-firestore:24.4.1'
+    implementation 'com.google.firebase:firebase-storage-ktx:20.1.0'
 
     //button navigation
     implementation 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
+
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 

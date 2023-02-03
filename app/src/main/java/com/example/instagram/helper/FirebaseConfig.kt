@@ -1,11 +1,13 @@
 package com.example.instagram.helper
 
-import android.app.Activity
-import android.os.Bundle
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import java.sql.DatabaseMetaData
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.StorageRegistrar
+
 
 class FirebaseConfig {
 
@@ -13,6 +15,7 @@ class FirebaseConfig {
 
         val FIREBASE_AUTH = FirebaseAuth.getInstance()
         val FIREBASE_DATABASE = FirebaseDatabase.getInstance().reference
+        private lateinit var storage : StorageReference
 
         fun getInstanceAuth() : FirebaseAuth {
             return FIREBASE_AUTH
@@ -20,6 +23,11 @@ class FirebaseConfig {
 
         fun getInstanceDataBase() : DatabaseReference {
             return FIREBASE_DATABASE
+        }
+
+        fun getInstanceStorage() : StorageReference {
+            storage = FirebaseStorage.getInstance().reference
+            return storage
         }
 
 
